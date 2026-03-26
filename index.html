@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamelia | Développeuse Web & Content Manager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- VARIABLES & BASE --- */
+        :root {
+            --grenat: #4A0404;
+            --blanc-casse: #FDFCF5;
+            --dore: #D4AF37;
+            --dore-sombre: #AA882E;
+            --texte-sombre: #2A2A2A;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: var(--blanc-casse); color: var(--texte-sombre); line-height: 1.6; }
+
+        /* --- NAVIGATION --- */
+        header {
+            background-color: var(--grenat);
+            padding: 1.5rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        .logo { color: var(--dore); font-size: 1.8rem; font-weight: 700; letter-spacing: 2px; }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(74, 4, 4, 0.9), rgba(74, 4, 4, 0.8)), 
+                        url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--blanc-casse);
+            padding: 0 10%;
+        }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+        .hero h1 span { color: var(--dore); }
+        .hero p { font-size: 1.2rem; max-width: 800px; margin-bottom: 2rem; color: #e0e0e0; }
+        
+        .btn-dore {
+            background: linear-gradient(135deg, var(--dore), var(--dore-sombre));
+            color: var(--grenat);
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.4s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+        .btn-dore:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5); }
+
+        /* --- SECTIONS --- */
+        .container { padding: 100px 10%; }
+        .section-title { 
+            text-align: center; 
+            color: var(--grenat); 
+            font-size: 2.8rem; 
+            margin-bottom: 60px;
+            position: relative;
+        }
+        .section-title::after {
+            content: ''; width: 80px; height: 5px; background: var(--dore);
+            position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%);
+        }
+
+        /* --- GRILLES (COMPÉTENCES & PROJETS) --- */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        
+        .card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: 0.4s;
+            border-top: 5px solid var(--dore);
+        }
+        .card:hover { transform: translateY(-15px); }
+        .card .icon { font-size: 3rem; margin-bottom: 20px; display: block; }
+        .card h3 { color: var(--grenat); margin-bottom: 15px; font-size: 1.5rem; }
+        .card p { color: #666; font-size: 0.95rem; }
+
+        /* --- FOOTER --- */
+        footer { background: var(--grenat); color: var(--dore); padding: 50px 10%; text-align: center; }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">KAMELIA</div>
+    </header>
+
+    <section class="hero">
+        <h1>Bienvenue, je suis <span>Kamelia</span></h1>
+        <p>Spécialiste en Management Digital & Développement Web. J'accompagne les entreprises dans leurs transformation numérique  en créant  des stratégies innovantes et des interfaces web élégantes, performantes et sur-mesure.</p>
+        <button class="btn-dore" id="actionBtn">Découvrir mon expertise </button>
+    </section>
+
+    <div class="container">
+        <h2 class="section-title">Mes Compétences</h2>
+        <div class="grid">
+            <div class="card">
+                <span class="icon">💻</span>
+                <h3>HTML & CSS</h3>
+                <p>Architecture web moderne et stylisation précise pour des sites élégants et responsives.</p>
+            </div>
+            <div class="card">
+                <span class="icon">⚡</span>
+                <h3>JavaScript</h3>
+                <p>Dynamisme et interactivité pour rendre vos interfaces vivantes et intelligentes.</p>
+            </div>
+            <div class="card">
+                <span class="icon">📱</span>
+                <h3>Content Management</h3>
+                <p>Stratégie éditoriale et gestion de contenus optimisés pour vos plateformes digitales.</p>
+            </div>
+            <div class="card">
+                <span class="icon">✨</span>
+                <h3>Design & UI</h3>
+                <p>Conception d'interfaces utilisateurs esthétiques respectant l'image de marque.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="background-color: #f9f6f0;">
+        <h2 class="section-title">Mes Réalisations</h2>
+        <div class="grid">
+            <div class="card" style="border-top: 5px solid var(--grenat);">
+                <span class="icon">📁</span>
+                <h3>Portfolio de Luxe</h3>
+                <p>Création complète de ce site vitrine utilisant les variables CSS pour un thème Grenat et Or sophistiqué.</p>
+            </div>
+            <div class="card" style="border-top: 5px solid var(--grenat);">
+                <span class="icon">🎮</span>
+                <h3>Reproduction Xbox</h3>
+                <p>Interface interactive reproduisant l'écosystème gaming avec une structure HTML sémantique.</p>
+            </div>
+            <div class="card" style="border-top: 5px solid var(--grenat);">
+                <span class="icon">📊</span>
+                <h3>Espace ESGEN</h3>
+                <p>Projet de gestion de données digitales conçu pour optimiser le management de l'économie numérique.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p> 2026 Kamelia \ Consultante en Management Digital & Web </p>
+    </footer>
+
+    <script>
+        console.log("Portfolio de Kamelia : Initialisation réussie.");
+        
+        const btn = document.getElementById('actionBtn');
+        btn.addEventListener('click', () => {
+            alert("Merci de votre visite ! Je suis actuellement en formation JavaScript, restez connectés pour voir mes futures applications.");
+        });
+    </script>
+
+</body>
+</html>
