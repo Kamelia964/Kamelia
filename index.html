@@ -90,10 +90,12 @@
             transition: 0.4s;
             border-top: 5px solid var(--dore);
         }
-        .card:hover { transform: translateY(-15px); }
-        .card .icon { font-size: 3rem; margin-bottom: 20px; display: block; }
-        .card h3 { color: var(--grenat); margin-bottom: 15px; font-size: 1.5rem; }
-        .card p { color: #666; font-size: 0.95rem; }
+        .card:hover { 
+            transform: translateY(-15px) scale(1.02); 
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.2);
+            border-top: 5px solid var(--grenat);
+            transition: all 0.5s ease;
+        }
 
         /* --- FOOTER --- */
         footer { background: var(--grenat); color: var(--dore); padding: 50px 10%; text-align: center; }
